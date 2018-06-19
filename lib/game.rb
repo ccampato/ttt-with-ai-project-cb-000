@@ -58,9 +58,9 @@ class Game
   end
 
   def turn
-    puts "Where would you like to go? [1-9]"
+    puts "Where would you like to go?:"
     input = current_player.move(input).to_i
-    @board.valid_move?(input) ? @board.update(input, current_player) : turn
+    board.valid_move?(input) ? board.update(input, current_player) : turn
     @board.display
     self.current_player
   end
